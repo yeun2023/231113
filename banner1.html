@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션 배너</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            width: 500px;
+            height: 500px;
+            background-color: #0079e2;
+            position: relative;
+        }
+
+        .banner>.business {
+            width: 350px;
+            height: 350px;
+            background-color: #003374;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            /* x,y */
+        }
+
+        .banner>.business .text {
+            position: absolute;
+            top: 130px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        
+        .banner>.business p {
+            color: #fff;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        @keyframes fadeInDelay {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        p:nth-child(1) {
+            font-weight: 900;
+            font-size: 37px;
+            animation:fadeIn 2s ease 0s 1 normal forwards;
+            /* 애니메이션 이름, 지속시간, ease:이징함수, 시작 지연 시간, 실행 횟수 */
+        }
+
+        p:nth-child(2) {
+            font-weight: 100;
+            font-size: 50px;
+            animation: fadeInDelay 2s ease 0s 1 normal forwards;
+        } 
+    </style>
+</head>
+
+<body>
+    <!-- .banner>.business>p+p -->
+    <div class="banner">
+        <div class="business">
+            <div class="text">
+                <p>비즈니스</p>
+                <p>제안서</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

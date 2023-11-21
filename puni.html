@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>말랑</title>
+    <style>
+        div.puni{
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            bottom:0px;
+            right: 0px;
+        }
+        div.puni a{
+            position: absolute;
+            bottom:5px;
+            right: 5px;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-color: #f3a9a9;
+        }
+        div.puni a:hover{background-color: #f88a8a; animation: puni 1.5s ease 0s infinite normal forwards;}
+        div.puni a:focus{background-color: #df2727; }
+        
+        @keyframes puni {
+            40%,60%{
+                width: 100%;
+                height: 100%;
+            }
+
+            50% {
+                width: 110%;
+                height: 90%;
+            }
+
+            55% {
+                width: 90%;
+                height: 110%;
+            }
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="puni"><a href="#"></a></div>
+</body>
+</html>
